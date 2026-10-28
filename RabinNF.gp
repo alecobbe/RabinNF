@@ -32,8 +32,8 @@ q=(C[random(length(C))+1]-1+D)*l+1;
 while(!ispseudoprime(q), q=q+D*l); 
 bp=Mod((1+x)*Mod(1,p),pol*Mod(1,p));
 while(liftall(bp^((p^poldegree(pol)-1)/2))!=p-1,bp=bp+x);
-bq=Mod((1+x)*Mod(1,p),pol*Mod(1,p));
-while(liftall(bq^((p^poldegree(pol)-1)/2))!=p-1,bq=bq+x);
+bq=Mod((1+x)*Mod(1,q),pol*Mod(1,q));
+while(liftall(bq^((q^poldegree(pol)-1)/2))!=q-1,bq=bq+x);
 [p*q, [p,q,liftall(bp),liftall(bq)]]
 }
 
